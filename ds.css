@@ -1,0 +1,331 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    background-image: url(g.gif);
+    overflow-x: hidden; /* Para evitar el deslizamiento horizontal */
+}
+
+.nav ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.nav:hover {
+    background-color: rgb(199, 15, 15);
+    transition: all 2s;
+    transform: scale(1.03);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: rgb(155, 124, 23);
+    height: -100px;
+    transition: background-color 1s;
+    position: fixed;
+    z-index: 1000;
+    border: solid black 6px;
+    border-radius: 23px;
+    transition: transform 0.7s ease-in-out;
+    width: 100%; /* Asegurarse de que el nav ocupa todo el ancho */
+}
+
+.nav-title {
+    display: flex;
+    color: rgb(255, 255, 255);
+    justify-content: start;
+    padding-left: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nav ul li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+.nav a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+
+.nav-link {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Times New Roman', Times, serif;
+    float: left;
+}
+
+a {
+    display: flex;
+    color: white;
+    margin: 10px;
+    justify-content: center;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    max-width: 400%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border: solid 12px currentColor;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    display: flex;
+    min-width:100%;
+    position: relative;
+    align-items: end;
+    justify-content: absolute;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img, .slide iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    
+}
+
+.text {
+    color: white;
+    background-color: rgba(155, 124, 23, 0.8);     padding: 10px;
+    border-radius: 5px;
+    font-size: 31px;
+    font-weight: bold;
+    border: solid black 10px;
+    transition: background-color 1s;
+    position: absolute;
+}
+
+.text:hover {
+    background-color: rgba(199, 15, 15, 0.8);   
+    transition: all 2s;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.carousel-button.prev {
+    left: 10px;
+    border-radius: 12px;
+}
+
+.carousel-button.next {
+    right: 10px;
+    border-radius: 12px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.Mas-info {
+    display: flex;
+    border-radius: 34px;
+    background-color: rgba(0, 0, 0, 0.404);
+    color: rgb(255, 255, 255);
+    transition: background-color 1s;
+    margin-left: auto;
+    border-bottom: solid;
+    margin-top: 34px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.Mas-info:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: all 2s;
+}
+
+.texto-1 {
+    display: flex;
+    align-items: center;
+    border: solid black 12px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: center;
+}
+
+.texto-1 img {
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.texto-1 .texto-info {
+    max-width: 400px;
+}
+
+.texto-1 .texto-info h1 {
+    margin-top: 0;
+    font-size: 40px;
+}
+
+.texto-1 .texto-info p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.texto-2 {
+    display: flex;
+    align-items: center;
+    border: solid black 12px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    flex-direction: row-reverse;
+}
+
+.texto-2 img {
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+
+.texto-2 .texto-info {
+    max-width: 400px;
+}
+
+.texto-2 .texto-info h1 {
+    margin-top: 0;
+    font-size: 40px;
+}
+
+.texto-2 .texto-info p {
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.comment-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.comment-box-container:hover {
+    transform: scale(1.05);
+}
+
+.comment-box {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    resize: none;
+    transition: all 0.5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.74);
+    color: white;
+}
+
+.comment-box:hover {
+    background-color: rgb(155, 124, 23);
+}
+
+.comment-box:focus {
+    border-color: rgb(155, 124, 23);
+    box-shadow: 0 0 10px rgb(199, 15, 15);
+    outline: none;
+}
+
+.submit-button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: rgb(155, 124, 23);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.7s ease-in-out;
+    animation: pulse 1s infinite;
+}
+
+.submit-button:hover {
+    background-color: rgb(199, 15, 15);
+}
+
+.gf {
+    color: black;
+}
+
+.image3,
+.image2,
+.image1 {
+    height: auto;
+    width: 100%;
+}
+
+.comentario {
+    background-color: white;
+    border: solid 10px black;
+    border-radius: 15px;
+    padding: 20px; /* Reducir el padding */
+}
+
+
